@@ -37,7 +37,7 @@ def TestParameterWr(filename,NomeTest,data,Articolo,Nodo,DescrizIngresso,BitQuan
         i=i+1
     #Testdata["Dati"].append(Dati[0])
     #Testdata[Dati].append(Dati[0])
-    print(Testdata)
+    #print(Testdata)
     with open(filename, 'w') as filejson:
         json.dump(Testdata, filejson)
         filejson.close()
@@ -47,7 +47,7 @@ def TestParameterRdForDB(filename):
         Testdata = json.load(jsonFile)
         jsonFile.close()
     print(" data is ",Testdata)
-    return json.dumps(Testdata)
+    return Testdata
    
 def TestParameterRd(filename):
     with open(filename) as jsonFile:
